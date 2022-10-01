@@ -11,10 +11,10 @@
                 <h1>
                     {{ $user->username }}
                 </h1>
-                <a href="">Add new post</a>
+                <a href="/p/create">Add new post</a>
             </div>
             <div class="d-flex">
-                <div class="pe-5"><strong>156</strong> posts</div>
+                <div class="pe-5"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="pe-5"><strong>102</strong> following</div>
                 <div class="pe-5"><strong>20</strong> follows</div>
             </div>
@@ -31,15 +31,11 @@
     <hr>
 
     <div class="row pt-5">
-        <div class="col-4">
-            <img src="https://i.pinimg.com/originals/0c/e0/62/0ce06216c4f52072b8560692f9aab4c3.png" alt="" class=" w-100">
+        @foreach($user->posts as $post)
+        <div class="col-4 pb-4">
+            <img src="/storage/{{ $post->image }}" alt="" class="w-100">
         </div>
-        <div class="col-4">
-            <img src="https://i.pinimg.com/474x/85/5b/2b/855b2b606c64c961da2922a240a43236.jpg" alt="" class=" w-100">
-        </div>
-        <div class="col-4">
-            <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="" class=" w-100">
-        </div>
+        @endforeach
     </div>
 </div>
 @endsection
