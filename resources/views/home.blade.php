@@ -8,7 +8,7 @@
         </div>
         <div class="col-9 pt-5">
             <div>
-                <h1>MyuserNAme</h1>
+                <h1> {{ $user->username }} </h1>
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>156</strong> posts</div>
