@@ -8,7 +8,7 @@
         </div>
         <div class="col-9 pt-5">
             <div>
-                <h1> {{ $user->username }} </h1>
+                <h1> {{ $user->usernameProfile }} </h1>
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>156</strong> posts</div>
@@ -16,12 +16,12 @@
                 <div class="pe-5"><strong>20</strong> follows</div>
             </div>
             <div class="pt-4 fw-bold">
-                Some title of the user
+                {{ $user->profile->title }}
             </div>
             <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, est! Error ut provident voluptatum, suscipit expedita quaerat nobis labore fugiat nesciunt, architecto quia dolorem facilis amet ex, voluptatibus sed explicabo!
+                {{ $user->profile->description }}
             </div>
-            <div><a href="#">Link to some site</a></div>
+            <div><a href="{{ $user->profile->url }}" target="_blank">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 
