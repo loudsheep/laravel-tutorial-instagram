@@ -7,8 +7,11 @@
             <img src="https://i.pinimg.com/originals/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg" alt="" class=" rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
-            <div>
-                <h1> {{ $user->username }} </h1>
+            <div class=" d-flex justify-content-between align-items-center">
+                <h1>
+                    {{ $user->username }}
+                </h1>
+                <a href="">Add new post</a>
             </div>
             <div class="d-flex">
                 <div class="pe-5"><strong>156</strong> posts</div>
@@ -24,6 +27,8 @@
             <div><a href="{{ $user->profile->url }}" target="_blank">{{ $user->profile->url }}</a></div>
         </div>
     </div>
+
+    <hr>
 
     <div class="row pt-5">
         <div class="col-4">
